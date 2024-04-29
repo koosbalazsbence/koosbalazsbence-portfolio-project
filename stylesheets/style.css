@@ -6,13 +6,15 @@
   --lightmode-text: #fbf9ef;
   --darkmode-text: #100e04;
   --darkish: #151414;
+  --footer-background: #0a0e10;
 
   /* Fonts */
+  --default-font: "Inter", sans-serif;
   --inter: "Inter", sans-serif;
   --poppins: "Poppins", sans-serif;
   --josefin-slab: "Josefin Slab", serif;
-  --system-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --system-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   /* Testing */
   --red-border: 3px dotted red;
@@ -21,6 +23,7 @@
 
 /* Scrollbar */
 * {
+  box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: #413e41 #252222;
   scroll-behavior: smooth;
@@ -68,9 +71,12 @@
 }
 
 body {
+  padding: 0;
+  margin: 0;
   background: var(--white-backgound);
   height: 300vh;
   max-width: 100%;
+  font-family: var(--default-font);
 }
 
 .inner {
@@ -92,16 +98,26 @@ body {
   font-weight: 400;
 }
 
-.navbar {
+.navbar{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-list{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
 }
 
 .mode{
   position: absolute;
   right: .5rem;
   /* background: black; */
-  border-radius: 50%;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
   border: 1px solid grey;
   padding: .5rem;
 }
@@ -110,10 +126,24 @@ body {
   cursor: pointer;
   border: none;
   border-radius: 50%;
+  background: #100e04;
 }
 .mode-img {
   width: 1.5rem;
   height: 1.5rem;
+}
+.mode-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: .25rem;
+  border-radius: 50%;
+}
+.light .mode-img {
+  filter: invert(100%);
+}
+.dark .mode-img {
+  filter: invert(0%);
 }
 
 #backToTopBtn {
@@ -161,4 +191,52 @@ body {
 #backToTopIcon:hover {
   color: var(--primary);
   transition: 0.2s ease-out;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-block: .75rem .5rem;
+  margin-block: 3rem 0;
+  background: var(--footer-background);
+  color: var(--lightmode-text);
+}
+
+.btn input[type="checkbox"]{
+  position: relative;
+  width: 80px;
+  height: 40px;
+  appearance: none;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 2px 2px #252222;
+  inset:  0 -2px -2px #252222;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.btn input:checked[type="checkbox"]{
+  background: #252222;
+  box-shadow: inset 0 2px 2px #fff;
+  inset:  0 -2px -2px #fff;
+}
+.btn input[type="checkbox"]::before{
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  background: linear-gradient(to  bottom, #eaeaea, #f9f9f9);
+  transition: 0.5s;
+  inset:0 2px 2px #fff, 0 -2px -2px #fff;
+}
+.btn input:checked[type="checkbox"]::before{
+  background: linear-gradient(to bottom, #444, #222);
+  transform: translateX(40px);
+  inset:0 2px 2px #ffffff33, 0 -2px -2px #ffffff33;
 }

@@ -38,7 +38,7 @@
   <!-- Layout -->
   <header>
     <nav class="navbar">
-      <ul>
+      <ul class="nav-list">
         <li>Home</li>
         <li>About me</li>
         <li>Projects</li>
@@ -47,15 +47,30 @@
       </ul>
     </nav>
     <!-- Toggle dark mode -->
-    <div class="mode">
-      <button class="mode-btn light"><img class="mode-img" src="assets/icons/sun.png" alt="light mode" title="switch to light mode"></button>
+    <!-- <div class="mode">
+      <button class="mode-btn light active"><img class="mode-img" src="assets/icons/sun.png" alt="light mode" title="switch to light mode"></button>
       <button class="mode-btn dark"><img class="mode-img" src="assets/icons/moon.png" alt="dark mode" title="switch to dark mode"></button>
-    </div>
+    </div> -->
   </header>
   <section></section>
   <article></article>
   <aside></aside>
-  <footer>
+
+  <div class="inner">
+    <p class="paragraph-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, debitis.</p>
+    <p class="paragraph-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, optio.</p>
+    <p class="paragraph-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, saepe?</p>
+  </div>
+
+  <!-- <div class="wrapper">
+    <div class="btn"><input type="checkbox" id="darkModeButton"></div>
+  </div> -->
+
+  <button onclick="topFunction()" id="backToTopBtn" title="Back to Top">
+    <i id="backToTopIcon" class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
+  
+  <footer class="footer">
     <ul>
       <li>Koós Balázs Bence</li>
       <li>14123081-4-24</li>
@@ -77,15 +92,6 @@
     <p><a href="pages/blank-page.html" onclick="myFunction()">Privacy policy</a></p>
     <p><a href="pages/blank-page.html">Terms of use</a></p>
   </footer>
-
-  <div class="inner">
-    <p class="paragraph-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, debitis.</p>
-    <p class="paragraph-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, optio.</p>
-    <p class="paragraph-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, saepe?</p>
-  </div>
-
-  <button onclick="topFunction()" id="backToTopBtn" title="Back to Top">
-    <i id="backToTopIcon" class="fa fa-arrow-up" aria-hidden="true"></i>
-  </button>
 </body>
+
 </html>
