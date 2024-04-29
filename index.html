@@ -1,35 +1,91 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Meta links -->
 
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!-- Poppins-->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"> <!-- Inter-->
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"> <!-- Josefin Slab-->
+<head>
+  <meta charset="UTF-8" />
 
-    <!-- Styles link -->
-    <link rel="stylesheet" href="stylesheets/style.css" />
+  <!-- Meta links -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Koós Balázs Bence portfólió weboldal." />
+  <meta name="description" content="Koós Balázs Bence's portofilo website." />
 
-    <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="assets/icons/bear-favicon.png"
-      type="image/x-icon"
-    />
+  <!-- Future plan -->
+  <!-- <meta http-equiv="refresh" content="0;URL='https://koosbalazsbence.com'" /> -->
 
-    <!-- Scripts -->
-    <script src="scripts/script.js" defer></script>
+  <!-- Fontawesome links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"> <!-- Poppins-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"> <!-- Inter-->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet"> <!-- Josefin Slab-->
 
-    <title>Koós Balázs Bence - Welcome</title>
-  </head>
-  <body>
-    <div class="inner">
-      <p class="paragraph-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, debitis.</p>
-      <p class="paragraph-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, optio.</p>
-      <p class="paragraph-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, saepe?</p>
+  <!-- Styles link -->
+  <link rel="stylesheet" href="stylesheets/style.css" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/icons/bear-favicon.png" type="image/x-icon" />
+
+  <!-- Scripts -->
+  <script src="scripts/script.js" defer></script>
+
+  <title>Koós Balázs Bence - Welcome</title>
+</head>
+
+<body>
+  <!-- Layout -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li>Home</li>
+        <li>About me</li>
+        <li>Projects</li>
+        <li>Offers</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <!-- Toggle dark mode -->
+    <div class="mode">
+      <button class="mode-btn light"><img class="mode-img" src="assets/icons/sun.png" alt="light mode" title="switch to light mode"></button>
+      <button class="mode-btn dark"><img class="mode-img" src="assets/icons/moon.png" alt="dark mode" title="switch to dark mode"></button>
     </div>
-  </body>
+  </header>
+  <section></section>
+  <article></article>
+  <aside></aside>
+  <footer>
+    <ul>
+      <li>Koós Balázs Bence</li>
+      <li>14123081-4-24</li>
+      <li>contact@koosbalazsbence.com</li>
+      <ul>
+        <li><a href="https://www.facebook.com/koos.balazs.58"></a></li>
+        <li><a href="https://www.instagram.com/koosbalazsbence"></a></li>
+        <li><a href="https://twitter.com/koosbalazsbence"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCRVIBsj-16w5Bj6edtGA9Pg"></a></li>
+        <li><a href="https://discord.com/users/1155139743839961260"></a></li>
+        <li><a href="https://github.com/koosbalazsbence"></a></li>
+      </ul>
+      <li>Copyright © 2025 Koós Balázs Bence LLC</li>
+    </ul>
+    <p>Courses</p>
+    <p>Contributor</p>
+    <p>Tags</p>
+    <p>Replies</p>
+    <p><a href="pages/blank-page.html" onclick="myFunction()">Privacy policy</a></p>
+    <p><a href="pages/blank-page.html">Terms of use</a></p>
+  </footer>
+
+  <div class="inner">
+    <p class="paragraph-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, debitis.</p>
+    <p class="paragraph-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, optio.</p>
+    <p class="paragraph-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, saepe?</p>
+  </div>
+
+  <button onclick="topFunction()" id="backToTopBtn" title="Back to Top">
+    <i id="backToTopIcon" class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
+</body>
 </html>

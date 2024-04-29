@@ -1,10 +1,11 @@
 :root {
   /* Colors */
-  --backgound: #eff0f0;
+  --white-backgound: #eff0f0;
   --lightmode-background: #fdfcf7;
   --primary: #cbc74d;
   --lightmode-text: #fbf9ef;
   --darkmode-text: #100e04;
+  --darkish: #151414;
 
   /* Fonts */
   --inter: "Inter", sans-serif;
@@ -22,9 +23,11 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: #413e41 #252222;
+  scroll-behavior: smooth;
+  user-select: none;
 }
 *::-webkit-scrollbar {
-  width: 16px;
+  width: 1rem;
 }
 *::-webkit-scrollbar-track {
   background: #252222;
@@ -55,22 +58,19 @@
   background-color: #413e41;
   border-radius: 10px;
   border: 3px solid #ffffff;
-} */
-
-*,
+}
+*/ *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-* {
-  user-select: none;
-}
 
 body {
-  background: var(--backgound);
+  background: var(--white-backgound);
   height: 300vh;
+  max-width: 100%;
 }
 
 .inner {
@@ -78,6 +78,7 @@ body {
   margin-inline: auto;
   width: 576px;
   font-size: 1.25rem;
+  max-width: 100%;
 }
 
 .paragraph-1 {
@@ -89,4 +90,75 @@ body {
 .paragraph-3 {
   font-family: var(--system-ui);
   font-weight: 400;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mode{
+  position: absolute;
+  right: .5rem;
+  /* background: black; */
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: .5rem;
+}
+.mode-btn{
+  /* border: var(--green-outline); */
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+.mode-img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.85rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: var(--darkish);
+  animation: slide-up 150ms forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* @keyframes slide-back {
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    display: none;
+    transform: translateY(75%);
+  }
+}
+.slide-back{
+  animation: slide-back 500ms forwards;
+} */
+
+#backToTopIcon {
+  color: grey;
+}
+#backToTopBtn:hover {
+  cursor: pointer;
+}
+#backToTopIcon:hover {
+  color: var(--primary);
+  transition: 0.2s ease-out;
 }
