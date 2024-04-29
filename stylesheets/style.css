@@ -1,0 +1,92 @@
+:root {
+  /* Colors */
+  --backgound: #eff0f0;
+  --lightmode-background: #fdfcf7;
+  --primary: #cbc74d;
+  --lightmode-text: #fbf9ef;
+  --darkmode-text: #100e04;
+
+  /* Fonts */
+  --inter: "Inter", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --josefin-slab: "Josefin Slab", serif;
+  --system-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  /* Testing */
+  --red-border: 3px dotted red;
+  --green-outline: 2px dashed green;
+}
+
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #413e41 #252222;
+}
+*::-webkit-scrollbar {
+  width: 16px;
+}
+*::-webkit-scrollbar-track {
+  background: #252222;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #413e41;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+/* TODO: Light mode scrollbar */
+
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: #413e41 #ededed;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ededed;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #413e41;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* {
+  user-select: none;
+}
+
+body {
+  background: var(--backgound);
+  height: 300vh;
+}
+
+.inner {
+  margin-block: 5rem;
+  margin-inline: auto;
+  width: 576px;
+  font-size: 1.25rem;
+}
+
+.paragraph-1 {
+  font-family: var(--inter);
+}
+.paragraph-2 {
+  font-family: var(--josefin-slab);
+}
+.paragraph-3 {
+  font-family: var(--system-ui);
+  font-weight: 400;
+}
